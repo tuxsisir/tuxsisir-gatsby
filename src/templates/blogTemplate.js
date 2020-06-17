@@ -12,7 +12,6 @@ export default function BlogTemplate ({
   return (
     <Layout>
       <div className="blog-post-container">
-      -- this is blog post
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>

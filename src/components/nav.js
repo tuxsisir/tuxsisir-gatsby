@@ -1,12 +1,17 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
+import Image from '../components/image'
+
 const Nav = () => (
-  <nav className='flex flex-row-reverse mb-4 font-mono'>
-    <Link className='mx-3' to="/about">ABOUT</Link>
-    <Link className='mx-3' to="/blog">BLOG</Link>
-    <Link className='mx-3' to="/projects">PROJECTS</Link>
-    <Link className='mx-3' to="/">HOME</Link>
+  <nav className='font-mono'>
+    <Image/>
+    <ul className='list-none mt-5'>
+      <li><Link className='no-underline' to="/">Home</Link></li>
+      <li><Link className='no-underline' to="/programming">Programming</Link></li>
+      <li><Link className='no-underline' to="/blog">Blog</Link></li>
+      <li><Link className='no-underline' to="/about">About</Link></li>
+    </ul>
   </nav>
 )
 

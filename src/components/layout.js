@@ -26,18 +26,22 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div className='container mx-auto'>
-        <Nav />
-        <div>
-          <main className='mb-auto'>{children}</main>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div className='grid md:grid-cols-4 gap-4 sm:grid-cols-none'>
+          <div className='md:col-span-1' style={{ border: '1px solid black' }}>
+            <Nav />
+            <footer>
+                &copy; {new Date().getFullYear()}, Built with
+              {' '}
+              <a href='https://www.gatsbyjs.org'>Gatsby</a>
+            </footer>
+          </div>
+          <div className='md:col-span-3' style={{ border: '1px solid black' }}>
+            <main className='mb-auto'>{children}</main>
+          </div>
         </div>
       </div>
-      <footer className="container mx-auto">
-          © {new Date().getFullYear()}, Built with
-        {' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
     </>
   )
 }

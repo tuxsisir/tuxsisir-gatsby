@@ -3,38 +3,36 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './header.css'
 
 const Header = ({ siteTitle }) => (
-  <header className='header'>
-    <div className="container mx-auto">
-      <div
-        className='header-content'
-      >
-        <a
-          className='float-right mx-3 text-white'
-          href='www.linkedin.com/in/sisir-ghimire-chettri'>
-          <FontAwesomeIcon icon={faLinkedin} size='2x' />
-        </a>
-        <a
-          className='float-right mx-3 text-white'
-          href='https://github.com/tuxsisir'>
-          <FontAwesomeIcon icon={faGithub} size='2x' />
-        </a>
-        <h1>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none'
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
-      </div>
+  <header className='site-header flex justify-between items-center'>
+    <div>
+      <h1 className='mt-5'>
+        <Link to="/" className='text-gray-700 no-underline'>
+          {siteTitle}
+        </Link>
+      </h1>
+    </div>
+    <div>
+      <a
+        className='float-right mx-3 text-gray-700'
+        href='mail'>
+        <FontAwesomeIcon icon={faEnvelope} className='text-2xl' />
+      </a>
+      <a
+        className='float-right mx-3 text-gray-700'
+        href='www.linkedin.com/in/sisir-ghimire-chettri'>
+        <FontAwesomeIcon icon={faLinkedin} className='text-2xl' />
+      </a>
+      <a
+        className='float-right mx-3 text-gray-700'
+        href='https://github.com/tuxsisir'>
+        <FontAwesomeIcon icon={faGithub} className='text-2xl' />
+      </a>
     </div>
   </header>
 )

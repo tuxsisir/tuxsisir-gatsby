@@ -6,9 +6,8 @@ import SEO from '../components/seo'
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Projects" />
-    <h1>Projects</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="Programming" />
+    <h2>Programming</h2>
   </Layout>
 )
 

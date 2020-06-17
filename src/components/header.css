@@ -1,24 +1,12 @@
 /* custom css */
-.header{
-  background: #0058a7;
+.site-header{
   left: 0px;
   right: 0px;
-  height: 180px;
-  margin: -4.45rem 0 1rem 0;
-  padding: 3.45rem 0.5rem;
+  height: 80px;
+  padding: 1rem 0.5rem;
   color: white;
-  -ms-transform: skewY(4deg); /* IE 9 */
-  -webkit-transform: skewY(20deg); /* Safari */
-  transform: skewY(-1.5deg);
-  border-bottom: 8px solid #efefef;
-}
-
-
-.header-content {
-  margin-top: 2.45rem;
-  -ms-transform: skewY(4deg); /* IE 9 */
-  -webkit-transform: skewY(4deg); /* Safari */
-  transform: skewY(1.5deg);
+  border-bottom: 2px solid #efefef;
+  margin-bottom: 1rem;
 }
 
 .float-right {

@@ -14,9 +14,8 @@ const BlogPage = ({
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
     <Layout>
-      <div>
+        <h2>Blog</h2>
         {Posts}
-      </div>
     </Layout>
   )
 }
