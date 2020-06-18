@@ -31,10 +31,14 @@ const Layout = ({ children }) => {
         <div className='grid md:grid-cols-4 gap-4 sm:grid-cols-none'>
           <div className='md:col-span-1 p-2' >
             <Nav />
-            <footer>
-                &copy; {new Date().getFullYear()}, Built with
-              {' '}
-              <a href='https://www.gatsbyjs.org'>Gatsby</a>
+            <footer className='text-xs'>
+              <div>Designed By Sisir Ghimire Chettri</div>
+              <div>
+                Copyright SGC &copy; {new Date().getFullYear()}
+              </div>
+              <div>
+                Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>, <a href='https://www.gatsbyjs.org'>Tailwind</a>
+              </div>
             </footer>
           </div>
           <div className='md:col-span-3 p-2' >

@@ -12,26 +12,26 @@ const Header = ({ siteTitle }) => (
   <header className='site-header flex justify-between items-center'>
     <div>
       <h1 className='mt-5 font-sans'>
-        <Link to="/" className='text-gray-700 no-underline'>
+        <Link to="/" className='text-blue-400 no-underline'>
           {siteTitle}
         </Link>
       </h1>
     </div>
     <div>
       <a
-        className='float-right mx-3 text-gray-700'
+        className='float-right mx-2 text-gray-700'
         href='mail'>
-        <FontAwesomeIcon icon={faEnvelope} className='text-2xl' />
+        <FontAwesomeIcon icon={faEnvelope} className='text-xl' />
       </a>
       <a
-        className='float-right mx-3 text-gray-700'
+        className='float-right mx-2 text-gray-700'
         href='www.linkedin.com/in/sisir-ghimire-chettri'>
-        <FontAwesomeIcon icon={faLinkedin} className='text-2xl' />
+        <FontAwesomeIcon icon={faLinkedin} className='text-xl' />
       </a>
       <a
-        className='float-right mx-3 text-gray-700'
+        className='float-right mx-2 text-gray-700'
         href='https://github.com/tuxsisir'>
-        <FontAwesomeIcon icon={faGithub} className='text-2xl' />
+        <FontAwesomeIcon icon={faGithub} className='text-xl' />
       </a>
     </div>
   </header>

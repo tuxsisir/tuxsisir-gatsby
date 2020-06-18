@@ -23,14 +23,14 @@ class HomePage extends React.Component {
   }
 
   render () {
-    const greetings = ['Hello', 'Bonjour', 'Hola', 'Namaste', 'Ni Hao', 'Dia Duit', 'Yia Sou']
+    const greetings = ['Hello', 'Bonjour', 'Hola', 'Guten Tag', 'Namaste', 'Nǐ hǎo', 'Yeoboseyo', 'Kon\'nichiwa']
     var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)]
     var self = this
     setTimeout(() => {
       self.setState({
         greeting: randomGreeting
       })
-    }, 5000)
+    }, 4000)
     return (
       <Layout>
         <SEO title="Home" />
@@ -42,12 +42,17 @@ class HomePage extends React.Component {
           Currently, I am building backend solutions in a Cloud Native Environment @fusemachines.
           </p>
           <p>
-            This is where I put my jibber-jabber to references and see backs.
+              This is where I <strong>may</strong> put my jibber-jabber writings to references and see backs.
             I hope that the things here would be of help for you too.
           </p>
           <p>
             If you want to know more about me, <Link className='no-underline' to="/about-me">click here.</Link>
           </p>
+        </div>
+        <hr />
+        <div>
+          <h3>Food for thought</h3>
+          <blockquote className="twitter-tweet"><p lang="en" dir="ltr">&quot;In programming the hard part isn’t solving problems, but deciding what problems to solve.&quot; - Paul Graham</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/1250457650200031232?ref_src=twsrc%5Etfw">April 15, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         </div>
       </Layout>
     )

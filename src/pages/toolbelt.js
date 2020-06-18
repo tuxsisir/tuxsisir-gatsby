@@ -20,7 +20,7 @@ class HomePage extends React.Component {
             charSet: 'utf-8'
           }]}
         />
-        <a frameborder="0" data-theme="light" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/ddfb83631dd5c76f1f8f5c03aac78d"></a>
+        <a frameBorder="0" data-theme="light" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/ddfb83631dd5c76f1f8f5c03aac78d"></a>
       </Layout>
     )
   }
