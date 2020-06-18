@@ -4,6 +4,7 @@
 
 @tailwind utilities;
 
-ul > li {
-
+.tux-underline {
+  text-decoration: underline solid #efefef 4px;
 }
+

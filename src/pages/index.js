@@ -1,30 +1,57 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import '../styles/global.css'
+import { Link } from 'gatsby'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div className='font-mono subpixel-antialiased leading-relaxed'>
-      <h2 className='font-mono'>Bonjour..</h2>
-      <p className='text-justify'>
+function Greeting (props) {
+  // Functional Component
+  return (
+    <h2 className={props.className}>
+      { props.value || 'Hello'}
+    </h2>
+  )
+}
+class HomePage extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      greeting: 'Hello',
+      className: 'transition duration-500 ease-in-out'
+    }
+  }
+
+  render () {
+    const greetings = ['Hello', 'Bonjour', 'Hola', 'Namaste', 'Ni Hao', 'Dia Duit', 'Yia Sou']
+    var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)]
+    var self = this
+    setTimeout(() => {
+      self.setState({
+        greeting: randomGreeting
+      })
+    }, 5000)
+    return (
+      <Layout>
+        <SEO title="Home" />
+        <div className='font-mono subpixel-antialiased leading-relaxed'>
+          <Greeting value={this.state.greeting} className={this.state.className} />
+          <p className='text-justify'>
           Thank you for reaching out here. <br/><br/>
-          I am Sisir, <strong>Software Developer</strong> based in Nepal.
+          I am Sisir, <strong className='tux-underline'>Software Developer</strong> based in Nepal.
           Currently, I am building backend solutions in a Cloud Native Environment @fusemachines.
-      </p>
-      <p className='text-justify'>
-        Details after giving attention fascinates me. Even more, what fascinates me
-          is the art and joy of writing computer programs, which puzzles, twists and ultimately shower of joy on its completion.
-      </p>
-    </div>
-    <div className='sm:flex-none'>
-      <div className='mx-auto' style={{ width: '400px' }}>
-      </div>
-    </div>
-  </Layout>
-)
+          </p>
+          <p>
+            This is where I put my jibber-jabber to references and see backs.
+            I hope that the things here would be of help for you too.
+          </p>
+          <p>
+            If you want to know more about me, <Link className='no-underline' to="/about-me">click here.</Link>
+          </p>
+        </div>
+      </Layout>
+    )
+  }
+}
 
-export default IndexPage
+export default HomePage

@@ -11,7 +11,7 @@ import './header.css'
 const Header = ({ siteTitle }) => (
   <header className='site-header flex justify-between items-center'>
     <div>
-      <h1 className='mt-5'>
+      <h1 className='mt-5 font-sans'>
         <Link to="/" className='text-gray-700 no-underline'>
           {siteTitle}
         </Link>

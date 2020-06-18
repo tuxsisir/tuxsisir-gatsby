@@ -2,11 +2,11 @@
 .site-header{
   left: 0px;
   right: 0px;
-  height: 80px;
+  height: 70px;
   padding: 1rem 0.5rem;
   color: white;
   border-bottom: 2px solid #efefef;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .float-right {

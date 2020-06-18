@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <div className='container mx-auto'>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className='grid md:grid-cols-4 gap-4 sm:grid-cols-none'>
-          <div className='md:col-span-1' style={{ border: '1px solid black' }}>
+          <div className='md:col-span-1 p-2' >
             <Nav />
             <footer>
                 &copy; {new Date().getFullYear()}, Built with
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
               <a href='https://www.gatsbyjs.org'>Gatsby</a>
             </footer>
           </div>
-          <div className='md:col-span-3' style={{ border: '1px solid black' }}>
+          <div className='md:col-span-3 p-2' >
             <main className='mb-auto'>{children}</main>
           </div>
         </div>
