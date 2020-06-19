@@ -40,7 +40,7 @@ class HomePage extends React.Component {
           <p className='text-justify'>
           Thank you for reaching out here. <br/><br/>
           I am Sisir, <strong className='tux-underline'>Software Developer</strong> based in Nepal.
-          Currently, I am building backend solutions in a Cloud Native Environment @fusemachines.
+            Currently, I am building backend solutions in a Cloud Native Environment <a href='https://fusemachines.com/'>@fusemachines</a>.
           </p>
           <p>
               This is where I <strong>may</strong> put my jibber-jabber writings to references and see backs.

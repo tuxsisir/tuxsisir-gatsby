@@ -20,12 +20,12 @@ const Header = ({ siteTitle }) => (
     <div>
       <a
         className='float-right mx-2 text-gray-700'
-        href='mail'>
+        href='mailto:samratsisir294@gmail.com'>
         <FontAwesomeIcon icon={faEnvelope} className='text-xl' />
       </a>
       <a
         className='float-right mx-2 text-gray-700'
-        href='www.linkedin.com/in/sisir-ghimire-chettri'>
+        href='https://linkedin.com/in/sisir-ghimire-chettri'>
         <FontAwesomeIcon icon={faLinkedin} className='text-xl' />
       </a>
       <a
