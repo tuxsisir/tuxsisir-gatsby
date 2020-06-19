@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
   <header className='site-header flex justify-between items-center'>
     <div>
       <h1 className='mt-5 font-sans'>
-        <Link to="/" className='text-blue-400 no-underline'>
+        <Link to="/" className='font-thin no-underline hover:no-underline'>
           {siteTitle}
         </Link>
       </h1>

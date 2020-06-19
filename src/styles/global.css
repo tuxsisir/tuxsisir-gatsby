@@ -8,3 +8,4 @@
   text-decoration: underline solid #efefef 4px;
 }
 
+.w3-animate-fading{animation:fading 4s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}

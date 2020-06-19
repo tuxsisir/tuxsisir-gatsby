@@ -44,9 +44,15 @@ a {
   background-color: transparent;
   text-decoration: none;
   color: #469ae6;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
 }
 a:active,
 a:hover {
+  color: orange;
   text-decoration: underline;
   outline-width: 0;
 }

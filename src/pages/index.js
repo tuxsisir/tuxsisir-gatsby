@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import '../styles/global.css'
 import { Link } from 'gatsby'
 
+
 function Greeting (props) {
   // Functional Component
   return (
@@ -18,7 +19,7 @@ class HomePage extends React.Component {
     super(props)
     this.state = {
       greeting: 'Hello',
-      className: 'transition duration-500 ease-in-out'
+      className: 'w3-animate-fading'
     }
   }
 
