@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const PostLink = ({ post }) => (
-  <div class='mb-5'>
-    <h3 class='mb-0'>
+  <div className='mb-5'>
+    <h3 className='mb-0'>
       <Link to={post.frontmatter.slug}>
         {post.frontmatter.title}
       </Link>
     </h3>
-    <small>{post.frontmatter.date}</small>
+    <small>{post.frontmatter.date} ({post.fields.readingTime.text})</small>
   </div>
 )
 export default PostLink

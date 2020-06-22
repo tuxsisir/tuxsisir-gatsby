@@ -20,7 +20,16 @@ module.exports = {
         name: 'cheatsheet-pages'
       }
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-reading-time',
+          'gatsby-remark-images',
+          'gatsby-remark-prismjs'
+        ]
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

@@ -11,15 +11,12 @@ export default function CheatsheetTemplate ({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <div className="">
-        <div className="">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className=""
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
+      <div>
+        <small className='text-gray-700 mb-0'>{frontmatter.date}</small>
+        <h2>{frontmatter.title}</h2>
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </Layout>
   )

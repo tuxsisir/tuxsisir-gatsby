@@ -6,12 +6,26 @@
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-
   const blogPostTemplate = require.resolve('./src/templates/blogTemplate.js')
+  const cheatsheetTemplate = require.resolve('./src/templates/cheatsheetTemplate.js')
 
-  const blogs = graphql(`
+  return graphql(`
     {
-      allMarkdownRemark(
+      blogs: allMarkdownRemark(
+        filter: { fileAbsolutePath: {regex : "/src/blog-pages/"} }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+      cheatsheets: allMarkdownRemark(
+        filter: { fileAbsolutePath: {regex : "/src/cheatsheet-pages/"} }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -28,9 +42,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Handle errors
     if (result.errors) {
       reporter.panicOnBuild('Error while running GraphQL query.')
-      return
     }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    // create blog pages with its own template
+    result.data.blogs.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.slug,
         component: blogPostTemplate,
@@ -40,32 +54,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       })
     })
-  })
-
-  const cheatsheetTemplate = require.resolve('./src/templates/cheatsheetTemplate.js')
-  const cheatsheets = graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `).then(result => {
-  // Handle errors
-    if (result.errors) {
-      reporter.panicOnBuild('Error while running GraphQL query.')
-      return
-    }
-
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    // create cheatsheet pages with its own template
+    result.data.cheatsheets.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.slug,
         component: cheatsheetTemplate,
@@ -76,7 +66,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       })
     })
   })
-
-  // Return a Promise which would wait for both the queries to resolve
-  return Promise.all([blogs, cheatsheets])
 }

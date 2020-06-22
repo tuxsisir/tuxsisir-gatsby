@@ -3,18 +3,22 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Img from 'gatsby-image'
 
 export default function BlogTemplate ({
   data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+  const featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
+
   return (
     <Layout>
       <div className="blog-post-container">
         <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
+          <h2>{frontmatter.title}</h2>
+          <p>{frontmatter.date}</p>
+          <Img fluid={featuredImgFluid} />
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -33,6 +37,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

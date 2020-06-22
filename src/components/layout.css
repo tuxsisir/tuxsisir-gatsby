@@ -447,10 +447,11 @@ blockquote {
   margin-right: 1.45rem;
   margin-top: 0;
   padding-bottom: 0;
-  padding-left: 0;
+  padding-left: 0.75rem;
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  border-left: 4px solid #d8d8d8;
 }
 form {
   margin-left: 0;

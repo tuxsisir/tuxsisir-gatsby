@@ -6,7 +6,7 @@ import Image from '../components/image'
 class Nav extends React.Component {
   render () {
     return (
-      <nav class='font-mono'>
+      <nav className='font-mono'>
         <Image placeholderStyle={{ visibility: 'hidden' }} />
         <div className='flex flex-col text-sm'>
           <Link className='font-bold' activeClassName='underline' to="/">Home</Link>

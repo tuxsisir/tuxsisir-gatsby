@@ -20,7 +20,7 @@ const BlogPage = ({
       <h2>Blog</h2>
       <p>
        You might find these mini blogs, short, well that's what mini blogs are but
-        I want readers to stimulate their own thought process with the topics that I dive into.
+        I want readers to stimulate their own thought process among the topic that I dive into.
       </p>
       {Posts}
     </Layout>
@@ -38,6 +38,11 @@ export const pageQuery = graphql`
         node {
           id
           excerpt(pruneLength: 250)
+          fields{
+            readingTime {
+              text
+            }
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug

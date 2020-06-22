@@ -16,7 +16,7 @@ const AboutMe = () => (
         Mostly, I am spending my time indoors. Sometimes -- I even forget to play some music. (wtf)
     </p>
     <p>
-        I <span className='line-through mr-1'>love</span>enjoy Maps, Timelines, Synthwave, CyberFuture, Hogwarts, Spirituality, Yoga and Books.
+        I <span className='line-through mr-1'>love</span>enjoy Synthwave, CyberFuture, Maps, Timelines, Hogwarts, Spirituality, Yoga and Books.
     </p>
   </Layout>
 )
