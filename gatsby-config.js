@@ -30,6 +30,14 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Open+Sans:300,400,400i,700'
+        ]
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

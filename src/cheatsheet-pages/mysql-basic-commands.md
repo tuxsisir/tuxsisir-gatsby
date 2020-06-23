@@ -1,5 +1,5 @@
 ---
-slug: "/mysql/mysql-basic-commands"
+slug: "/cheatsheet/basic-mysql-commands"
 date: "2020-02-18"
 title: "Basic Mysql Commands"
 ---

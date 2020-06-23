@@ -7,16 +7,33 @@ title: "Basic Postgresql Commands"
 
 #### Create user, database and grant roles
 
-- `$ drop database john_db;`
+- Drop database
+```
+$ drop database john_db;
+```
 
-- `$ create database john_db;`
+- Create database
+```
+$ create database john_db;
+```
+- Create User
+```
+$ create user john;
+```
+or,
+```
+$ create user john with encrypted password 'john@password';
+```
 
-- `$ create user john;` or, `$ create user john with encrypted password 'john@password';`
+- Alter User
+```
+$ alter user john with encrypted password 'john@password';
+```
 
-- `$ alter user john with encrypted password 'john@password';`
-
-- `$ grant all privileges on database john_db to john;`
-
+- Grant Privileges
+```
+$ grant all privileges on database john_db to john;
+```
 
 ---
 
