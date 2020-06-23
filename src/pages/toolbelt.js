@@ -10,7 +10,7 @@ class HomePage extends React.Component {
     return (
       <Layout>
         <SEO title="Toolbelt" />
-        <h2>Toolbelt - Full Stack Docker Agent</h2>
+        <h2>Toolbelt - Full Stack Chopstick Docker Agent</h2>
         <p>I am carrying the toolbelt of full stack web development as of now.</p>
           <a href="https://stackshare.io" className='mb-3'>Powered By: Stack Share</a>
         <Helmet

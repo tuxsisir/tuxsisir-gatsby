@@ -19,7 +19,7 @@ const CheatsheetPage = ({
       <SEO title="Cheatsheets" />
       <h2>Cheatsheets</h2>
       <p>
-        Here are some of my cheatsheets that I find useful to refer back.
+        Here are some of the cheatsheets that I find useful to refer back.
       </p>
       <ul>
         {Cheatsheets}

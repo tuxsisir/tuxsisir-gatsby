@@ -4,6 +4,16 @@ date: "2020-02-18"
 title: "Basic Mysql Commands"
 ---
 
+
+#### Create User and Grant Privileges
+```sql
+CREATE USER 'flaskuser'@'localhost' IDENTIFIED BY 'flaskpassword';
+
+GRANT ALL PRIVILEGES ON flaskdb.* TO 'flaskuser'@'localhost';
+
+FLUSH PRIVILEGES;
+```
+
 #### Mysql Dumps
 
 ```sql
