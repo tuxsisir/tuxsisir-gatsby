@@ -5,8 +5,10 @@ import React from 'react'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config } from '@fortawesome/fontawesome-svg-core'
 
 import './header.css'
+config.autoAddCss = false
 
 const Header = ({ siteTitle }) => (
   <header className='site-header flex justify-between items-center'>
@@ -21,17 +23,17 @@ const Header = ({ siteTitle }) => (
       <a
         className='float-right mx-2 text-gray-700'
         href='mailto:samratsisir294@gmail.com'>
-        <FontAwesomeIcon icon={faEnvelope} className='text-xl' />
+        <FontAwesomeIcon icon={faEnvelope} className='text-lg' />
       </a>
       <a
         className='float-right mx-2 text-gray-700'
         href='https://linkedin.com/in/sisir-ghimire-chettri'>
-        <FontAwesomeIcon icon={faLinkedin} className='text-xl' />
+        <FontAwesomeIcon icon={faLinkedin} className='text-lg' />
       </a>
       <a
         className='float-right mx-2 text-gray-700'
         href='https://github.com/tuxsisir'>
-        <FontAwesomeIcon icon={faGithub} className='text-xl' />
+        <FontAwesomeIcon icon={faGithub} className='text-lg' />
       </a>
     </div>
   </header>

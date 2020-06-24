@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/**/*.html',
+    './src/**/*.jsx',
+    './src/**/*.js'
+  ],
   theme: {
     listStyleType: {
       none: 'none',
@@ -8,8 +12,8 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        default: '10rem',
-        sm: '2rem',
+        default: '2rem',
+        sm: '1rem',
         lg: '4rem',
         xl: '8rem'
       }

@@ -6,5 +6,6 @@
 
 // You can delete this file if you're not using it
 //
-require('prismjs/themes/prism-solarizedlight.css')
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
+require('prismjs/themes/prism-solarizedlight.css')

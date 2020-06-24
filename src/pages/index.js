@@ -25,18 +25,12 @@ class HomePage extends React.Component {
 
   render () {
     const greetings = ['Hello', 'Bonjour', 'Hola', 'Guten Tag', 'Namaste', 'Nǐ hǎo', 'Yeoboseyo', 'Kon\'nichiwa']
-    var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)]
-    var self = this
-    setTimeout(() => {
-      self.setState({
-        greeting: randomGreeting
-      })
-    }, 4000)
+    // var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)]
+    // var self = this
     return (
       <Layout>
         <SEO title="Home" />
         <div className='font-mono subpixel-antialiased leading-relaxed'>
-          <Greeting value={this.state.greeting} className={this.state.className} />
           <p className='text-justify'>
           Thank you for reaching out here. <br/><br/>
           I am Sisir, <strong className='tux-underline'>Software Developer</strong> based in Nepal.
