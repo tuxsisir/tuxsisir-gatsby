@@ -10,8 +10,8 @@ class Nav extends React.Component {
         <Image placeholderStyle={{ visibility: 'hidden' }} />
         <div className='flex flex-col text-sm'>
           <Link className='font-bold' activeClassName='underline' to="/">Home</Link>
-          {/* <Link className='font-bold' activeClassName='underline' to="/blog">Blog</Link>
-          <Link className='font-bold' activeClassName='underline' to="/cheatsheet">Cheatsheets</Link> */}
+          { /* <Link className='font-bold' activeClassName='underline' to="/notes">Notes</Link>
+          <Link className='font-bold' activeClassName='underline' to="/cheatsheet">Cheatsheets</Link> */ }
           <Link className='font-bold' activeClassName='underline' to="/toolbelt">Toolbelt</Link>
           <Link className='font-bold' activeClassName='underline' to="/about-me">About Me</Link>
 

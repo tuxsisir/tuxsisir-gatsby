@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
 
-export default function BlogTemplate ({
+export default function NotesTemplate ({
   data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -14,13 +14,13 @@ export default function BlogTemplate ({
 
   return (
     <Layout>
-      <div className="blog-post-container">
-        <div className="blog-post">
+      <div className="notes-post-container">
+        <div className="notes-post">
           <h2>{frontmatter.title}</h2>
           <p>{frontmatter.date}</p>
           <Img fluid={featuredImgFluid} />
           <div
-            className="blog-post-content"
+            className="notes-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
