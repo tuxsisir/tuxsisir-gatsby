@@ -9,14 +9,14 @@ const AboutMe = () => (
     <SEO title="About Me"/>
     <h2>About Me</h2>
     <h3>Career</h3>
-    <p>Currently, @fusemachines.</p>
+    <p>Currently, @nowhere.</p>
     <h3>Personal</h3>
     <p>
       <span className='line-through mr-1'>Fun Loving, Traveller, Listening to music...</span>
       Mostly, I am spending my time indoors.
     </p>
     <p>
-        I <span className='line-through mr-1'>love</span>enjoy Synthwave music and CyberFuture.
+        I <span className='line-through mr-1'>love</span>enjoy Synthwave, Cybernetics, CyberPunk.
     </p>
   </Layout>
 )
